@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE-edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Page</title>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="../style.css">
+    <!--fav-icon-->
+    <link rel="shortcut icon" href="../img/Mlogo.png">
+    <!--poppins-font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><!--monoton-font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <!--using-font-awesome-->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!--navigation-->
+<nav class="navigation">
+    <!--menu-btn-->
+    <input type="checkbox" class="menu-btn" id="menu-btn">
+    <label for="menu-btn" class="menu-icon">
+        <span class="nav-icon"></span>
+    </label>
+    <!--logo-->
+    <a href="../MovieWeb.html" class="logo">
+        Movies<span>.hd</span>
+    </a>
+    <!--menu-->
+    <ul class="menu">
+        <li><a href="../MovieWeb.html">Home</a></li>
+        <li><a href="../MovieWeb.html#latest">Latest</a></li>
+        <li><a href="../MovieWeb.html#vietnam">VietNam</a></li>
+        <li><a href="../MovieWeb.html#foreign">Foreign</a></li>
+        <li><a href="../MovieWeb.html#cartoon">Cartoon</a></li>
+    </ul>
+    <!--Search-box-->
+    <form action="" class="search-box">
+        <input type="text" name="search" placeholder="Search movie" class="search-input" required/>
+        <!--btn-->
+        <button type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+</nav>
+<!--nav-end-->
+
+<!--Movie-Banner-->
+<section class="movie-banner">
+
+    <!--m-banner-img-->
+    <div class="m-banner-img">
+        <img src="../img/joker5.jpg" alt="">
+    </div>
+
+    <!--content-->
+    <div class="banner-container">
+
+        <!--title-container-->
+        <div class="title-container">
+            <!--title-top-->
+            <div class="title-top">
+                <!--title-->
+                <div class="movie-title">
+                    <h1>TheJoker</h1>
+                </div>
+                <!--more-about-movie-->
+                <div class="more-about-movie">
+                    <span class="quality">Full HD</span>
+                    <div class="rating">
+                        8.2 <img src="../img/IMDb-icon.png" alt="imbd">
+                    </div>
+                    <span>4/11/2021</span>
+                    <span>2:45s</span>
+                </div>
+                <!--language-->
+                <div class="language">
+                    <span>English</span>
+                </div>
+
+            </div>
+
+            <!--tile-bottom-->
+            <div class="title-bottom">
+                <!--category-->
+                <div class="category">
+                    <strong>Category</strong><br>
+                    <a href="#">A</a>,<a href="#">B</a>,<a href="#">C</a>
+                </div>
+                <!--trailer-btn-->
+                <a href="#" class="watch-btn">Watch Trailer</a>
+            </div>
+
+
+        </div>
+
+
+        <!--play-btn-->
+        <div class="play-btn-container">
+            <div class="play-btn">
+                <a href="javascript:void">
+                    <i class="fas fa-play"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <!--Full-movie-->
+        <div id="play" class="play">
+            <!--close-btn-->
+            <a href="javascript:void" class="close-movie" >
+                <i class="fas fa-times"></i>
+            </a>
+            <!--movie-->
+            <div class="play-movie">
+                <video id="m-video" controls>
+                    <source src="../video/joker.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+<!--banner-end-->
+
+<!--details-->
+<section class="movie-details">
+    <strong>ABCDE</strong>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, blanditiis. Odio praesentium harum numquam ex aut, dolorum ab amet necessitatibus enim quisquam? Quibusdam et cumque ipsa beatae nulla obcaecati enim?</p>
+</section>
+
+<!--ScreenShorts-->
+<section class="screenshorts">
+    <strong>ScreenShorts</strong>
+    <!--screen-s-container-->
+    <div class="screen-s-container">
+        <img src="../img/joker4.png" alt="">
+        <img src="../img/joker3.jpg" alt="">
+    </div>
+
+
+</section>
+
+<!--jQuery-->
+<script src="../jQuery.js"></script>
+
+
+<script>
+    /*scroll-progress-bar*/
+    let  scrollPrecentage = () => {
+        let scrollProgress = document.getElementById("progress");
+        let progressValue = document.getElementById("progress-value");
+        let pos = document.documentElement.scrollTop;
+        let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrollValue = Math.round(pos * 100 / calcHeight);
+        scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%`;
+    }
+    window.onscroll = scrollPrecentage;
+    window.onload = scrollPrecentage;
+
+    <!--menu-btn-fixed-when-scroll-->
+    $(window).scroll(function(){
+        if($(document).scrollTop() > 20){
+            $('.navigation').addClass('fix-icon');
+        }
+        else{
+            $('.navigation').removeClass('fix-icon')
+        }
+    });
+
+    /*--popup-close--*/
+    $(document).on('click', '.play-btn a', function(){
+        $('.play').addClass('active-popup');
+    });
+    $(document).on('click', '.close-movie', function(){
+        $('.play').removeClass('active-popup');
+    });
+    /*--auto-play-when-popup-open*/
+    $('.play-btn a').click(function (){
+        $('#m-video')[0].play();
+    });
+    /*--close-video-when-popup-close*/
+    $('.close-movie').click(function (){
+        $('#m-video')[0].pause();
+    })
+</script>
+
+</body>
+</html>
