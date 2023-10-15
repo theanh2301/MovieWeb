@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/Mlogo.png">
     <title>Các thành viên nhóm</title>
     <style>
-        img{
-            border: 2px solid black;
-            width: 100%;
-            height: 50%;
-        }
-        div.nhom{
+        .nhom{
             
             background-image: url(./img/back.jpg);
             text-align: center;
@@ -20,51 +16,27 @@
             background-origin:content-box;
             background-size:100% 100%
         }
-        .theanh{
-            border: 2px solid purple;
-            color: purple;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: large;
-            margin-top: 30px;
-            background-color: bisque;
-            box-shadow: 2px 2px 2px 2px;
+
+        .left-content {
+            float: left;
+            width: 50%;
         }
-        .tuananh{
-            border: 2px solid red;
-            color: red;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: large;
-            margin-top: 30px;
-            background-color: lavender;
-            box-shadow: 2px 2px 2px 2px;
+        img{
+            border: 2px solid black;
+            width: 100%;
+            height: 50%;
         }
-        .hoanganh{
-            border: 2px solid rgba(19, 148, 234, 0.947);
-            color: blue;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: large;
-            margin-top: 30px;
-            background-color: aqua;
-            box-shadow: 2px 2px 2px 2px;
+        .card {
+            padding: 20px;
+            margin-top: 20px;
+
         }
-        .thanhdat{
-            border: 2px solid palevioletred;
-            color: rgb(198, 113, 127);
-            font-family: 'Courier New', Courier, monospace;
-            font-size: large;
-            margin-top: 30px;
-            background-color: rgb(54, 209, 209);
-            box-shadow: 2px 2px 2px 2px;
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
         }
-        .anhtuan{
-            border: 2px solid green;
-            color: greenyellow;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: large;
-            margin-top: 30px;
-            background-color: brown;
-            box-shadow: 2px 2px 2px 2px;
-        }
+
         .nut{
             background-color: rgba(62, 133, 240, 0.769);
             border-radius: 8px;
@@ -101,38 +73,65 @@ a{
 </head>
 <body>
     <div class="nhom"><h1 style="padding-top: 30px;">Các thành viên nhóm 1</h1></div>
-    <div class="theanh">
-        <h1>Họ và tên: Mai Thế Anh</h1>
-        <p><strong>Mã sinh viên: 20221977</strong></p>
-        <p><strong>Sở thích: xem phim, ăn uống, ngủ sớm</strong></p>
-        <img src="./img/maitheanh.jpg" alt="">
+    <div style="height: 800px; width: 100%;">
+
+
+        <div class="row">
+            <div class="left-content">
+                <div class="card">
+                    <div class="theanh">
+                        <h1>Họ và tên: Mai Thế Anh</h1>
+                        <p><strong>Mã sinh viên: 20221977</strong></p>
+                        <p><strong>Sở thích: xem phim, ăn uống, đua xe</strong></p>
+                        <img src="./img/maitheanh.jpg" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="tuananh">
+                        <h1>Họ và tên: Nguyễn Đình Tuấn Anh</h1>
+                        <p> <strong>Mã sinh viên: 20221967</strong></p>
+                        <p><strong>Sở thích: chơi game, chơi thể thao, ăn uống</strong></p>
+                        <img src="./img/nguyendtuananh.jpg" alt="">
+                    </div>
+                </div>
+                <div class="hoanganh">
+                    <h1>Họ và tên: Nguyễn Hoàng Anh</h1>
+                    <p><strong>Mã sinh viên: 20221978</strong></p>
+                    <p><strong>Sở thích: chơi game, xem phim, ăn uống</strong></p>
+                    <img src="./img/hoanganh.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left-content">
+                    <div class="card">
+                        <div class="thanhdat">
+                            <h1>Họ và tên: Đỗ Thành Đạt</h1>
+                            <p> <strong>Mã sinh viên: 20221842</strong></p>
+                            <p><strong>Sở thích: xem phim hoạt hình,thích màu tím,ăn uống ,chơi thể thao</strong></p>
+                            <img src="./img/dothanhdat.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="anhtuan">
+                            <h1>Họ và tên: Nguyễn Vũ Anh Tuấn</h1>
+                            <p><strong>Mã sinh viên: 20221896 </strong></p>
+                            <p><strong>Sở thích: Ăn uống,xem phim,chơi thể thao</strong></p>
+                            <img src="./img/vuanhtuan.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="tuananh">
-        <h1>Họ và tên: Nguyễn Đình Tuấn Anh</h1>
-        <p> <strong>Mã sinh viên: 20221967</strong></p>
-        <p><strong>Sở thích: chơi game, chơi thể thao, ăn uống</strong></p>
-        <img src="./img/nguyendtuananh.jpg" alt="">
-    </div>
-    <div class="hoanganh">
-        <h1>Họ và tên: Nguyễn Hoàng Anh</h1>
-        <p><strong>Mã sinh viên: 20221978</strong></p>
-        <p><strong>Sở thích: chơi game, xem phim, ăn uống</strong></p>
-        <img src="./img/hoanganh.jpg" alt="">
-    </div>
-    <div class="thanhdat">
-        <h1>Họ và tên: Đỗ Thành Đạt</h1>
-        <p> <strong>Mã sinh viên: 20221842</strong></p>
-        <p><strong>Sở thích: xem phim hoạt hình,thích màu tím,ăn uống ,chơi thể thao</strong></p>
-        <img src="./img/dothanhdat.jpg" alt="">
-    </div>
-    <div class="anhtuan">
-        <h1>Họ và tên: Nguyễn Vũ Anh Tuấn</h1>
-        <p><strong>Mã sinh viên: 20221896 </strong></p>
-        <p><strong>Sở thích: Ăn uống,xem phim,chơi thể thao</strong></p>
-        <img src="./img/vuanhtuan.jpg" alt="">
-    </div>
+
+
+
+
+
     <footer>
         <p style="font-size: larger;font-family: 'Courier New', Courier, monospace;"><strong> Và đây là bài tập lớn của nhóm em </strong></p>
         <button class="nut"><a href="./MovieWeb.html" > Ấn đây để xem </a></button></footer>
+
 </body>
 </html>
